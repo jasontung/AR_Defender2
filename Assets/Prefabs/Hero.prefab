@@ -903,6 +903,8 @@ GameObject:
   - component: {fileID: 114572228489364520}
   - component: {fileID: 195853799214953340}
   - component: {fileID: 114151911383896018}
+  - component: {fileID: 54196662857885510}
+  - component: {fileID: 136324840847999786}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -1898,7 +1900,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1814952452549078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4157033207988646}
@@ -2288,6 +2290,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1844897513837094}
   m_Mesh: {fileID: 4300006, guid: 9e2fe0cd84d31514e92f2a3ca7aa249a, type: 3}
+--- !u!54 &54196662857885510
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814952452549078}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64473495275975958
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -2455,8 +2472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33b6e6550c716c4482dcfdd2623a4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 95402355152183960}
-  navMeshAgent: {fileID: 195853799214953340}
   animSpeedParam: speed
   turnSmooth: 15
 --- !u!114 &114380840205313824
@@ -2502,7 +2517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469b8a6ef1052f447b241a1f2b514cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 195853799214953340}
   attackRadius: 0
   attackRangeRect: {fileID: 224404849015333738}
   enemyLayerMask:
@@ -2513,11 +2527,11 @@ MonoBehaviour:
   attackProbeCircle: {fileID: 114776781521519860}
   target: {fileID: 0}
   turnSmooth: 15
-  animator: {fileID: 95402355152183960}
+  gunDamage: 10
   attackBool: attack
-  audioSource: {fileID: 82039340978535398}
   fireSound: {fileID: 8300000, guid: fa7f046ce321d4021b5e753bf1152916, type: 3}
   gunShotEffect: {fileID: 198337117393359006}
+  deadSound: {fileID: 8300000, guid: 02e6208ec76314158a9f548f51fe9f11, type: 3}
 --- !u!114 &114776781521519860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2561,6 +2575,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!136 &136324840847999786
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814952452549078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.68
+  m_Height: 2.9
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.43, z: 0}
 --- !u!137 &137758624860898464
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
