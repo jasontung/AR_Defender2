@@ -147,6 +147,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 224777962715277510, guid: 2c5ba6db6e8fea946942eea400fadb83,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224777962715277510, guid: 2c5ba6db6e8fea946942eea400fadb83,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c5ba6db6e8fea946942eea400fadb83, type: 2}
   m_IsPrefabParent: 0
@@ -251,14 +261,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 135597732899177968, guid: e9e09c83c96673240a68a811f26fae25,
+    - target: {fileID: 224321128688411548, guid: e9e09c83c96673240a68a811f26fae25,
         type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1601034414914880, guid: e9e09c83c96673240a68a811f26fae25, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
+    - target: {fileID: 224321128688411548, guid: e9e09c83c96673240a68a811f26fae25,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9e09c83c96673240a68a811f26fae25, type: 2}
@@ -400,7 +411,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4932888530059252, guid: 98bfff8ec6d0d0647a0b361e11f2e441, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4932888530059252, guid: 98bfff8ec6d0d0647a0b361e11f2e441, type: 2}
       propertyPath: m_LocalPosition.y
@@ -429,10 +440,6 @@ Prefab:
     - target: {fileID: 4932888530059252, guid: 98bfff8ec6d0d0647a0b361e11f2e441, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1814952452549078, guid: 98bfff8ec6d0d0647a0b361e11f2e441, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 98bfff8ec6d0d0647a0b361e11f2e441, type: 2}
