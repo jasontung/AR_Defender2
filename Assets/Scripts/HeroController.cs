@@ -21,6 +21,7 @@ public class HeroController : MonoBehaviour
     public AudioClip fireSound;
     public ParticleSystem gunShotEffect;
     private Collider mCollider;
+    private RagdollBehavior ragdollBehavior;
     public AudioClip deadSound;
     private void Awake()
     {
@@ -29,13 +30,9 @@ public class HeroController : MonoBehaviour
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         mCollider = GetComponent<Collider>();
+        ragdollBehavior = GetComponent<RagdollBehavior>();
     }
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -95,5 +92,6 @@ public class HeroController : MonoBehaviour
         mCollider.enabled = false;
         enabled = false;
         audioSource.PlayOneShot(deadSound);
+        ragdollBehavior.ToggleRagdoll(true);
     }
 }
