@@ -11,15 +11,21 @@ public class CrystalController : MonoBehaviour {
     public ParticleSystem chargeEffect;
     public ParticleSystem chargeCompleteEffect;
     private Collider mCollider;
+    //------------------------
+    public bool isDead;
+    //------------------------
     private void Awake()
     {
         mCollider = GetComponent<Collider>();
         chargeSlider.maxValue = crystalChargeTime;
-        StartCoroutine(Execute());
+        //------------------------
+        //StartCoroutine(Execute());
+        //------------------------
     }
-    
-    IEnumerator Execute()
-    {
+
+    //------------------------
+    public IEnumerator Execute()
+    { //------------------------
         chargeEffect.Play();
         while(enabled)
         {
@@ -45,5 +51,8 @@ public class CrystalController : MonoBehaviour {
         chargeEffect.Stop();
         enabled = false;
         mCollider.enabled = false;
+        //------------------------
+        isDead = true;
+        //------------------------
     }
 }
