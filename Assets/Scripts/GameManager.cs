@@ -14,7 +14,18 @@ public class GameManager : MonoBehaviour {
 
     private void Awake()
     {
+        OnBattleFieldLost();
+    }
+
+    public void OnBattleFieldReady()
+    {
+        menePanel.interactable = true;
+    }
+
+    public void OnBattleFieldLost()
+    {
         Pause();
+        menePanel.interactable = false;
     }
     public void Pause()
     {
